@@ -1,0 +1,213 @@
+/* Estilos generales*/
+body{
+    background: #111
+}
+/* Segundo banner */
+#banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+}
+#banner .row{
+    position: relative;
+    top: -50%;
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    white-space: nowrap;
+    font-size: 64px;
+    transform: rotate(-30deg);
+}
+.row div i{
+    color: rgba(0, 0, 0, 0.5);
+    transition: 1s;
+    padding: 0 5px;
+    user-select: none;
+    cursor: default;
+}
+.row div i:hover{
+    transition: 0s;
+    color: #0f0;
+    text-shadow: 0 0 120px #0f0;
+
+}
+#banner .row div{
+    animation: animate1 80s linear infinite;
+    animation-delay: -80s;
+}
+#banner .row div:nth-child(2){
+    animation: animate2 80s linear infinite;
+    animation-delay: -40s;
+}
+@keyframes animate1{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes animate2{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
+
+.banner_text{
+    position: relative;
+    display: inline;
+    margin: auto;
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    background: transparent;
+    color: #fff;
+    z-index: 300;    
+}
+.banner_text h2{
+    font-weight: bold;
+}
+
+
+
+/* Boton de inicio */
+.container{
+    position: absolute;
+    gap: 2rem;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    z-index: 100;
+}
+.container a{
+    position: realtive;
+    display:  block;
+    padding: 15px 30px;
+    border: 2px solid #0f0;
+    margin: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #fff;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #0002) ;
+    transition: 0.5s;
+}
+.container a:hover{
+    color: #111;
+}
+.container a:before{
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #0f0;
+    box-shadow: 5px -8px 0 #0f0, 
+                5px -8px 0 #0f0;
+}
+
+/* Estilos Menu */
+.Menu_contenedor{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+.containerMenu{
+    position: relative;
+    gap: 2rem;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    z-index: 100;
+}
+.containerMenu a{
+    position: realtive;
+    display:  block;
+    padding: 15px 30px;
+    border: 2px solid #0f0;
+    margin: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #fff;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #0002) ;
+    transition: 0.5s;
+}
+.containerMenu a:hover{
+    color: #000;
+    
+}
+.containerMenu a span{
+    position: relative;
+    z-index: 400;
+}
+.containerMenu a::before{
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #0f0;
+    box-shadow: 5px -8px 0 #0f0, 
+                5px 8px 0 #0f0;
+    transition: width 0.5s, left 0.5s, height 0.5s,
+                box-shadow 0.5s;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+}
+.containerMenu a:hover::before{
+    width: 60%;
+    height: 39%;
+    left: -2px;
+    box-shadow: 5px 0 0 #0f0,
+                5px 0 0 #0f0;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+    z-index: 200;
+}
+.containerMenu a::after{
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #0f0;
+    box-shadow: -5px -8px 0 #0f0, 
+                -5px 8px 0 #0f0;
+    transition: width 0.5s, left 0.5s, height 0.5s,
+                box-shadow 0.5s;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+}
+.containerMenu a:hover::after{
+    width: 50%;
+    height: 39%;
+    right: -2px;
+    box-shadow: -5px 0 0 #0f0,
+                -5px 0 0 #0f0;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+    z-index: 200;
+}
